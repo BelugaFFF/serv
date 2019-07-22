@@ -1,0 +1,2089 @@
+@charset "utf-8";
+/*------------------------------------------------------------
+	デフォルトスタイル
+------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	outline: 0;
+
+	font-size: 1em;
+}
+
+body {
+	font-size: 62.5%;
+}
+
+.selector {
+  font-feature-settings : "palt";
+}
+
+
+body,
+table,
+input, textarea, select, option {
+	font-family: "游明朝", YuMincho,"ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝","ＭＳ 明朝", serif;
+}
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+ins {
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+img {
+	vertical-align: top;
+}
+
+a,
+a:link {
+	color: #333;
+	text-decoration: none;
+	transition: .6s ease;
+}
+
+a:visited {
+	color: #000;
+}
+
+a:active {
+	color: #000;
+}
+
+/*------------------------------------------------------------
+	レイアウト
+------------------------------------------------------------*/
+body {
+	min-width: 1200px;
+	color: #333;
+	font-size: 13px;
+	line-height: 1.5;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #FFF;
+}
+
+#container {
+	padding-bottom: 25px;
+	text-align: left;
+}
+
+#main {
+	padding: 60px 0 0;
+}
+
+a[href^="tel:"] {
+	cursor: default;
+	pointer-events: none;
+}
+
+.sp {
+	display: none !important;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media all and (min-width: 0) and (max-width: 767px) {
+	body {
+		min-width: inherit;
+	}
+
+	#container {
+		padding-bottom: 17px;
+	}
+
+	a:hover,
+	a:hover img {
+		opacity: 1 !important;
+	}
+
+	.sp {
+		display: block !important;
+	}
+
+	.pc {
+		display: none !important;
+	}
+
+	a[href^="tel:"] {
+		cursor: pointer;
+		pointer-events: auto;
+	}
+
+	#main {
+		padding: 30px 0 0;
+	}
+
+
+}
+/*------------------------------------------------------------
+	ヘッダー
+------------------------------------------------------------*/
+#gHeader {
+
+}
+
+.sc #gHeader {
+	position: fixed;
+}
+
+@media all and (min-width: 0) and (max-width: 767px) {
+
+}
+/*------------------------------------------------------------
+	gNavi
+------------------------------------------------------------*/
+#gNavi {
+
+}
+
+/*------------------------------------------------------------
+	パンクズリスト
+------------------------------------------------------------*/
+#pagePath {
+}
+
+#pagePath li {
+	display: inline;
+	color: #000;
+	font-size: 1.2em;
+}
+
+#pagePath li a {
+}
+
+@media all and (min-width: 0) and (max-width: 767px) {
+}
+/*------------------------------------------------------------
+	conts
+------------------------------------------------------------*/
+#conts {
+
+}
+
+.vertical {
+	-webkit-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+}
+
+@media all and (min-width: 0) and (max-width: 767px) {
+
+}
+
+/*------------------------------------------------------------
+	書式設定
+------------------------------------------------------------*/
+/* テキストの位置 */
+.taLeft { text-align: left !important; }
+.taCenter { text-align: center !important; }
+.taRight { text-align: right !important; }
+
+/* フォントの大きさ（プラス） */
+.fsP1 { font-size: 1.08em !important; }
+.fsP2 { font-size: 1.16em !important; }
+.fsP3 { font-size: 1.24em !important; }
+.fsP4 { font-size: 1.32em !important; }
+.fsP5 { font-size: 1.4em !important; }
+
+/* フォントの大きさ（マイナス） */
+.fsM1 { font-size: 0.92em !important; }
+.fsM2 { font-size: 0.84em !important; }
+.fsM3 { font-size: 0.76em !important; }
+.fsM4 { font-size: 0.68em !important; }
+.fsM5 { font-size: 0.6em !important; }
+
+/* フォントの太さ */
+.fwNormal { font-weight: normal !important; }
+.fwBold { font-weight: bold !important; }
+
+/*------------------------------------------------------------
+	微調整用クラス（※多用しないこと）
+------------------------------------------------------------*/
+.mt0 { margin-top: 0 !important; }
+.mb0 { margin-bottom: 0 !important; }
+
+/*------------------------------------------------------------
+	汎用スタイル
+------------------------------------------------------------*/
+	* html .clearfix {
+		zoom: 1;
+	}
+
+	*+html .clearfix {
+		zoom: 1;
+	}
+
+.clearfix:after {
+	height: 0;
+	visibility: hidden;
+	content: ".";
+	display: block;
+	clear: both;
+}
+
+.bookBox {
+	margin: 0 auto;
+	width: 1016px;
+	position: relative;
+	box-sizing: border-box;
+	color: #35a740;
+}
+
+.bookBox img {
+	width: 100%;
+}
+
+.bookBox h2,
+.bookBox h3,
+.bookBox h2 svg,
+.bookBox h3 svg {
+	position: absolute;
+}
+
+.bookBox h2 {
+	width: 29px;
+	left: -73px;
+}
+
+.bookBox h3 {
+	width: 25.5px;
+	top: -1px;
+	right: -44px;
+}
+
+.bookBox h2 svg {
+	transform: scale(0.5);
+	fill: #35a740;
+	top: -143px;
+	left: 0;
+}
+
+.bookBox h3 svg {
+	transform: scale(0.5);
+	fill: #35a740;
+	top: -104px;
+}
+
+.bookBox .bookJapanese,
+.bookBox .bookEnglish {
+	width: 50%;
+	min-height: 666px;
+	float:  left;
+	position: relative;
+	box-sizing: border-box;
+	border: 25px solid #35a740;
+}
+
+.bookEnglish:before {
+	width: 144px;
+	height: 108%;
+	display: block;
+	content: "";
+	position: absolute;
+	left: -25px;
+	top: -25px;
+	background: linear-gradient(left, rgba(0,0,0,0.05), transparent);
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.05), transparent);
+	background: -o-linear-gradient(left, rgba(0,0,0,0.05), transparent);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.05), transparent);
+}
+
+.chinMsg {
+	height: 100%;
+	position: absolute;
+	bottom: 15px;
+	left: 17px;
+	text-align: right;
+	font-size: 12px;
+	letter-spacing: .7px;
+}
+
+.chinMsg span {
+	margin-top: 0px;
+	line-height: 1;
+	text-align: center;
+	writing-mode: horizontal-tb;
+	writing-mode: lr-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-webkit-writing-mode: lr-tb;
+}
+
+.chinContent {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 462px;
+  font-size: 18px;
+	font-weight: bold;
+	line-height: 40px;
+	letter-spacing: 3px;
+}
+
+
+.chinContent object {
+  line-height: 18px;
+  letter-spacing: 0;
+	writing-mode: horizontal-tb;
+	writing-mode: lr-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-webkit-writing-mode: lr-tb;
+}
+
+
+
+
+.engContent {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 344px;
+  font-size: 18px;
+	line-height: 1.67;
+	font-family: "Times New Roman Regular", Times, serif;
+}
+
+.engMsg {
+	position: absolute;
+	bottom: 13px;
+	left: 21px;
+	font-size: 11px;
+}
+
+.bookTime {
+	font-size: 16px;
+	text-align: center;
+	line-height: 4.2;
+}
+
+.contents {
+	margin: 100px auto 0;
+	width: 970px;
+}
+
+.contents .archiveJapanTitle {
+	padding-right: 24px;
+}
+
+.contents .archiveUkTitle {
+	padding-left: 34px;
+}
+
+.contentsJapan,
+.contentsUK {
+	margin-top: 53px;
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.contentsJapan {
+	padding-right: 20px;
+}
+
+.contentsJapan p {
+	margin-left: 39px;
+	min-height: 406px;
+	float: right;
+	font-size: 14px;
+	line-height: 2.7;
+}
+
+.contentsJapan p:last-child {
+	margin-left: 0;
+}
+
+.contentsJapan p span {
+	writing-mode: horizontal-tb;
+	writing-mode: lr-tb;
+	-webkit-writing-mode: horizontal-tb;
+	-webkit-writing-mode: lr-tb;
+	text-align: center;
+	margin: 0;
+	line-height: 1;
+}
+
+.archiveJapanTitle:after {
+	width: 1px;
+	height: 25px;
+	content: "";
+	position: absolute;
+	right: -25px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #1b1b1b;
+}
+
+.contentsUK {
+	margin-top: 44px;
+	padding-left: 35px;
+}
+
+.contentsUK p {
+	font-size: 13px;
+	line-height: 2.4;
+}
+
+.contentsUK p:nth-child(2) {
+	margin-top: 30px;
+}
+
+.bookTwo {
+	margin: 50px auto 0;
+ 	width: 641px;
+}
+
+.bookTwo img {
+	width: 100%;
+}
+
+.bookDesc {
+	padding-top: 22px;
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+.bookDesc p {
+	margin-bottom: 13px;
+}
+
+.bookDesc p:last-child {
+	margin-bottom: 0;
+}
+
+.archiveBox {
+	margin: 42px auto 0;
+	width: 1017px;
+}
+
+.publicTitle h2,
+.archiveList li p {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.archiveJapanTitle {
+	padding-right: 18px;
+	position: relative;
+	color: #040404;
+	font-size: 25px;
+	text-align: right;
+	line-height: 2;
+	letter-spacing: 1.2px;
+}
+
+.archiveJapanTitle:after {
+	right: 0;
+}
+
+.archiveUkTitle {
+	padding-left: 21px;
+	color: #040404;
+	font-size: 32px;
+	font-weight: normal;
+	font-family: "Times New Roman Regular", Times, serif;
+}
+
+.archiveList {
+	margin-top: 50px;
+}
+
+.archiveList li {
+	position: relative;
+	overflow: hidden;
+	line-height: 62px;
+	border-top: 1px solid #b5b5b5;
+}
+
+.archiveWords {
+	cursor: pointer;
+	transition: .6s ease;
+}
+
+.archiveWords:hover {
+	opacity: .5;
+	transition: .6s ease;
+}
+
+.archiveList li:before,
+.archiveList li:after {
+	width: 14px;
+	height: 1px;
+	display: block;
+	content: "";
+	position: absolute;
+	top: 30px;
+	right: 18px;
+	cursor: pointer;
+	transition: .6s ease;
+	background: #666666;
+}
+
+.archiveList li:after {
+	transform: rotateZ(90deg);
+}
+
+.archiveList li:last-child {
+	border-bottom: 1px solid #b5b5b5;
+}
+
+.archiveInfo {
+	margin: 0 -15px;
+}
+
+.detailsList {
+	padding: 20px 0 42px 0;
+	/*width: 50%;
+	float: left;*/
+	box-sizing: border-box;
+}
+
+.detailsList object br {
+	display:none;
+}
+
+/*.detailsList:last-child {
+	padding: 0 0 0 18px;
+}*/
+
+.detailsList div {
+	margin: 0 15px 30px 15px;
+	padding: 23px 30px;
+	overflow: hidden;
+	width: 492px;
+	box-sizing: border-box;
+}
+
+.detailsList p.JapanCont,
+.detailsList p.UkCont {
+	width: 100%;
+	float: none;
+}
+
+li.showDetails .detailsList {
+	display: block;
+}
+
+li.showDetails:after {
+	transform: rotateZ(45deg);
+}
+
+li.showDetails:before {
+	transform: rotateZ(-45deg);
+}
+
+.JapanCont {
+	font-size: 15px;
+	line-height: 1.5;
+	font-weight: bold;
+	line-height: 1.85;
+	letter-spacing: 1px;
+}
+
+.JapanCont span {
+	margin-top: 1px;
+	display: block;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.UkCont {
+	margin-top: 19px;
+	font-size: 14px;
+	line-height: 1.3;
+	letter-spacing: -.4px;
+}
+
+.UkCont span {
+	margin-top: 10px;
+	display: block;
+	font-size: 12px;
+}
+
+.green {
+	border: 7px solid #50b037;
+	color: #50b037;
+}
+
+.bottleGreen {
+	border: 7px solid #04654f;
+	color: #04654f;
+}
+
+.blue {
+	border: 7px solid #024b9c;
+	color: #024b9c;
+}
+
+.orange {
+	border: 7px solid #eca002;
+	color: #eca002;
+}
+
+.violet {
+	border: 7px solid #7f0f7f;
+	color: #7f0f7f;
+}
+
+.archiveJapan {
+	padding-right: 18px;
+	font-size: 18px;
+	text-align: right;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.archiveUK {
+	padding-left: 18px;
+	font-size: 15px;
+	letter-spacing: 1.3px;
+}
+
+.archiveLogo {
+	padding: 19px 20px 16px 64px;
+	margin: 41px auto 0;
+	width: 292px;
+	display: block;
+	box-sizing: border-box;
+	border: 3px solid #d2d2d2;
+	transition: .6s ease;
+	background: url(../img/img_arrow_left.png) no-repeat 23px center;
+	background-size: 10px 14px;
+
+}
+
+.archiveLogo img {
+	width: 79px;
+	float: left;
+}
+
+.archiveLogo p {
+	padding-left: 8px;
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.archiveLogo:hover {
+	opacity: .5;
+	transition: .6s ease;
+}
+
+.howtoBox {
+	margin: 180px auto 110px;
+	width: 1020px;
+}
+
+.howtoList {
+	margin-top: 57px;
+}
+
+.howtoList li {
+	width: 33.333%;
+	float: left;
+	text-align: center;
+}
+
+.inside img {
+	width: 280px;
+}
+
+.order .number {
+	color: #040404;
+	font-size: 85px;
+	display: inline-block;
+	font-family: "Times New Roman Regular", Times, serif;
+	line-height: 0.9;
+	border-bottom: 3px solid #000;
+}
+
+.order p {
+	margin-top: 22px;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.order .words {
+	display: block;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.inside {
+	margin-top: 24px;
+	color: #040404;
+	font-family:  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+.inside p {
+	margin: 25px 0 15px;
+	font-size: 14px;
+	line-height: 1.8;
+	letter-spacing: .4px;
+}
+
+.inside span {
+	display: block;
+	font-size: 10px;
+}
+
+.events {
+	margin: 150px auto;
+	width: 720px;
+}
+
+.eventImg {
+	margin-top: 74px;
+}
+
+.eventImg a {
+	transition: .6s ease;
+}
+
+.eventImg a:hover {
+	opacity: .5;
+	transition: .6s ease;
+}
+
+.eventImg img {
+	width: 100%;
+}
+
+.pageTop {
+	margin: 110px auto 65px;
+	width: 30px;
+}
+
+.pageTop a {
+	transition: .6 ease;
+}
+
+.pageTop a:hover {
+	opacity: .5;
+	transition: .6 ease;
+}
+
+.pageTop img {
+	width: 100%;
+}
+
+.copy {
+	color: #040404;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+	text-align: center;
+	font-size: 10px;
+	letter-spacing: .5px;
+}
+
+.copy a {
+	color: #08088A;
+	transition: opacity .6s ease;
+}
+
+.copy a:hover {
+	opacity: .5;
+}
+
+
+.ityped-cursor {
+    opacity: 1;
+	font-weight: 900;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: #FFF;
+}
+
+.EnglishLink {
+	display: none;
+}
+
+.wordShop {
+	padding: 92px 0 95px;
+	background: #e6f4fd;
+}
+
+.wsInfo {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.wordShop h2 {
+	margin-left: 8px;
+	margin-top: 9px;
+	width: 100px;
+	font-size: 87.5px;
+	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+	float: left;
+	writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	letter-spacing: 8px;
+}
+
+.wsWprd {
+	margin-left: 352px;
+}
+
+.wsWprd h3 {
+	margin-bottom: 36px;
+	font-size: 30px;
+	font-weight: normal;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+	letter-spacing: 2px;
+}
+
+.wsWprd p {
+	margin-bottom: 24px;
+	font-size: 13px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+	line-height: 1.95;
+	letter-spacing: .7px;
+}
+
+.wsWprd p a {
+	text-decoration: underline;
+}
+
+.wsWprd p a:hover {
+	opacity: .6;
+	text-decoration: none;
+}
+
+.wsLink {
+	padding-top: 24px;
+}
+
+.wsLink a {
+	padding: 16px 10px 16px 24px;
+	min-width: 257px;
+	font-size: 14px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+	text-align: center;
+	display: inline-block;
+	letter-spacing: .7px;
+	box-sizing: border-box;
+	border: 2px solid #000;
+	background: url(../img/img_ws_arrow.png) no-repeat center left 20px;
+	background-size: 9px 13px;
+}
+
+.wsLink a:hover {
+	opacity: .5;
+}
+
+.wsImg01 {
+	margin-top: 52px;
+	margin-right: -5px;
+	width: 190px;
+	float: right;
+}
+
+.wsImg02 {
+	width: 200px;
+	float: left;
+	position: relative;
+	left: -31px;
+	top: 335px;
+}
+
+.wsImg01,
+.wsImg02 {
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.wsImg01 img,
+.wsImg02 img {
+	width: 100%;
+}
+
+.siteBanner img {
+	display: block;
+	width: 100%;
+}
+
+.siteBanner {
+	padding: 77px 0 0;
+	width: 1016px;
+	margin: 0 auto;
+}
+
+.siteBanner li {
+	margin-bottom: 20px;
+}
+
+.siteBanner li:last-child {
+	margin-bottom: 0;
+}
+
+.siteBanner img {
+	transition: .6s ease;
+}
+
+.siteBanner a:hover img {
+  opacity: .5;
+}
+
+@media all and (min-width: 0) and (max-width: 767px) {
+	/*------------------------------------------------------------
+		sp_Japan
+	------------------------------------------------------------*/
+	.siteBanner {
+		width: auto;
+		padding: 66px 0 20px 0;
+		margin: 0 15px;
+	}
+
+	.siteBanner a:hover {
+	  opacity: 1;
+	}
+
+	.bookBox {
+		margin: 0 18px 0 49px;
+		width: auto;
+	}
+
+	.bookBox .bookJapanese,
+	.bookBox .bookEnglish {
+		width: auto;
+		min-height: 345px;
+		float: none;
+		border-width: 10px;
+	}
+
+	.bookBox h2 {
+		width: 15.5px;
+		top: 1px;
+		left: -31px;
+	}
+
+	.chinContent {
+    max-height: 249px;
+		font-size: 12px;
+		letter-spacing: 1.8px;
+		line-height: 23px;
+	}
+
+  .chinContent span {
+    padding-top: 0;
+    line-height: 13px;
+  }
+
+	.chinMsg {
+		font-size: 8px;
+		bottom: 13px;
+		left: 12px;
+	}
+
+	.chinMsg span {
+		line-height: 1;
+	}
+
+	.bookTime {
+		font-size: 10px;
+		text-align: left;
+		line-height: 3.6;
+	}
+
+	.bookTime span {
+		float: right;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+		font-size: 12px;
+		line-height: 3;
+		letter-spacing: .2px;
+	}
+
+	.bookTime em {
+		font-style: normal;
+	}
+
+	.bookTime .ja {
+		text-decoration: underline;
+	}
+
+	.English .bookTime .ja {
+		text-decoration: none;
+	}
+
+	.English .bookTime .en {
+		text-decoration: underline;
+	}
+
+	.bookEnglish {
+		display: none;
+	}
+
+	.English .bookEnglish {
+		display: block;
+	}
+
+	.bookTime a {
+		color: #35a740;
+	}
+
+	a.active {
+		text-decoration: underline;
+	}
+
+	.contents {
+		margin: 70px auto 0;
+		width: 250px;
+		box-sizing: border-box;
+	}
+
+	.contents div {
+		padding: 0;
+		width: auto;
+		float: none;
+	}
+
+	.contents .archiveJapanTitle,
+	.contents .archiveUkTitle {
+		padding: 0;
+	}
+
+	.archiveJapanTitle::after {
+		display: none;
+	}
+
+	.contentsJapan {
+		margin-top: 23px;
+	}
+
+	.contentsJapan p {
+		margin: 0;
+		min-height: 360px;
+		font-size: 11px;
+		line-height: 2.25;
+		letter-spacing: 1.3px;
+	}
+
+	.contentsJapan p:last-child {
+		float: left;
+	}
+
+	.bookTwo {
+		width: auto;
+		margin: 35px 14px 0;
+	}
+
+	.archiveBox {
+		margin: 100px auto 0;
+		width: auto;
+	}
+
+	.publicTitle h2,
+	.archiveList li p {
+		padding: 0;
+		width: auto;
+		float: none;
+		text-align: center;
+	}
+
+	.archiveJapanTitle {
+		font-size: 16px;
+	}
+
+	.archiveList {
+		margin: 23px 12px 0;
+	}
+
+	.archiveList li {
+		line-height: 38px;
+	}
+
+	.archiveWords:hover {
+		opacity: 1;
+	}
+
+	.archiveList li::before,
+	.archiveList li::after {
+		width: 10px;
+		top: 19px;
+		right: 10px;
+	}
+
+	.archiveInfo {
+		padding: 10px 0 18px 0;
+	}
+
+	.detailsList {
+		padding: 0;
+		width: auto;
+		float: none;
+	}
+
+	.detailsList div {
+		margin-bottom: 19px;
+		padding: 14px 19px;
+		border-width: 3px !important;
+		position: inherit !important;
+		top: 0 !important;
+		width: auto !important;
+	}
+
+	.detailsList p {
+		text-align: left !important;
+	}
+
+	.JapanCont {
+		font-size: 10px;
+	}
+
+	.JapanCont span,
+	.UkCont span {
+		margin-top: 0;
+		font-size: 6px;
+	}
+
+	.UkCont {
+		margin-top: 14px;
+		font-size: 8px;
+		letter-spacing: 0;
+	}
+
+	.UkCont span {
+		margin-top: 8px;
+	}
+
+	.archiveLogo {
+		margin: 28px auto 0;
+		padding: 12px 12px 10px 45px;
+		width: 220px;
+		border-width: 2px;
+		background-position: 15px center;
+		background-size: 8px auto;
+	}
+
+	.archiveLogo img {
+		width: 58px;
+	}
+
+	.archiveLogo p {
+		padding-left: 8px;
+		font-size: 11px;
+		letter-spacing: 1.5px;
+	}
+	.archiveLogo:hover {
+		opacity: 1;
+	}
+
+	.EnglishLink p {
+		padding-left: 11px;
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+
+	.EnglishLink img {
+		padding-left: 10px;
+	}
+
+	.archiveJapan {
+		font-size: 13px;
+	}
+
+	.howtoBox {
+		margin: 100px auto 69px;
+		width: auto;
+	}
+
+	.howtoList {
+		margin: 22px 26px 0;
+	}
+
+	.howtoList li {
+		margin-bottom: 47px;
+		width: auto;
+		float: none;
+	}
+
+	.howtoList li:last-child {
+		margin-bottom: 0;
+	}
+
+	.order .number {
+		width: 35px;
+		font-size: 50px;
+		font-weight: normal;
+		border-width: 2px;
+		line-height: 0.85;
+	}
+
+	.order p {
+		margin-top: 10px;
+		font-size: 22px;
+	}
+
+	.inside {
+		margin-top: 6px;
+	}
+
+	.inside img {
+		width: 230px;
+	}
+
+	.inside p {
+		font-size: 12px;
+		margin: 14px 0 0;
+		line-height: 1.7;
+	}
+
+	.events {
+		width: auto;
+	}
+
+	.eventImg {
+		margin: 22px 12px;
+	}
+
+	.eventImg a:hover {
+		opacity: 1;
+	}
+
+	.pageTop {
+    	margin: 41px auto 41px;
+	}
+
+	.pageTop a:hover {
+		opacity: 1;
+	}
+
+	.copy {
+		font-size: 8px;
+	}
+
+	.Japan .bookEnglish,
+	.Japan .bookBox h3,
+  .Japan .contentsUK,
+	.Japan .archiveUkTitle,
+	.Japan .archiveUK,
+	.Japan .inside span,
+	.Japan .order .words{
+		display: none;
+	}
+
+	/*------------------------------------------------------------
+		sp_English
+	------------------------------------------------------------*/
+	.bookEnglish::before {
+		display: none;
+	}
+
+	.bookBox h3 {
+		width: 16.5px;
+		top: 0;
+		right: auto;
+		left: -31px;
+	}
+
+	.engContent {
+		font-size: 12px;
+		max-width: 190px;
+	}
+
+	.engMsg {
+		left: 14px;
+		bottom: 10px;
+		font-size: 10px;
+	}
+
+	.English .contents {
+		margin: 39px auto 0;
+		min-width: 274px;
+	}
+
+	.contentsUK {
+		margin-top: 16px;
+	}
+
+	.contentsUK p {
+		font-size: 11px;
+		line-height: 1.8;
+	}
+
+	.contentsUK p:nth-child(2) {
+		margin-top: 21px;
+	}
+
+	.archiveUkTitle {
+		font-size: 20px;
+	}
+
+	.archiveUK {
+		font-size: 13px;
+		letter-spacing: 0;
+	}
+
+	.order .words {
+		margin-top: 12px;
+		font-size: 18px;
+	}
+
+	.inside span {
+		margin-top: 20px;
+		font-size: 11px;
+	}
+
+	.English .bookJapanese,
+	.English .bookBox h2,
+  	.English .contentsJapan,
+	.English .archiveJapanTitle,
+	.English .archiveJapan,
+	.English .inside p,
+	.English .order p,
+	.Japanese .archiveUK,
+	.Japanese .contentsUK,
+	.Japanese .archiveUkTitle,
+	.Japanese .order .words,
+	.Japanese .inside span,
+	.Japanese .bookBox h3,
+	.English .JapanCont,
+	.Japanese .UkCont,
+	.English .japanLink,
+	.Japanese .EnglishLink,
+	.English .making .archiveJapanTitle,
+	.English .making .contentsJapan,
+	.English .bookDesc p.jp,
+	.Japanese .bookDesc p.en {
+		display: none;
+	}
+
+	.Japanese .newsTitle .archiveUkTitle {
+		display: block;
+	}
+
+	.English .bookDesc p.en {
+		text-align: left;
+		margin: 0 13px;
+	}
+
+	.English .making .contentsUK {
+		margin: 16px auto 0 auto;
+		padding: 0;
+		width: 274px;
+	}
+
+	.English .making .contentsUK p {
+		line-height: 1.8;
+		font-size: 11px;
+	}
+
+	.English .making .archiveUkTitle {
+		padding-left: 0;
+		line-height: 30px;
+	}
+
+	.Japanese .archiveJapan {
+		display: block;
+	}
+
+	.English .EnglishLink {
+		display: block;
+	}
+
+	.masonryList {
+		height: auto !important;
+	}
+
+	.bookBox h2 svg {
+		transform: scale(0.27);
+    top: -212px;
+    left: -21px;
+	}
+
+	.bookBox h3 svg {
+    transform: scale(0.32);
+    top: -143px;
+    left: -14px;
+	}
+
+	.copy a:hover {
+		opacity: 1;
+	}
+
+	.wordShop {
+		padding: 48px 0 67px;
+	}
+
+	.wsInfo {
+		width: auto;
+	}
+
+	.wsWprd {
+		margin-left: 0;
+	}
+
+	.wordShop h2 {
+		margin-left: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
+		width: auto;
+		font-size: 37.5px;
+		float: none;
+		text-align: center;
+		writing-mode: lr-tb;
+		-webkit-writing-mode: horizontal-tb;
+		letter-spacing: 4px;
+	}
+
+	.wsWordTitle {
+		margin-bottom: 6px;
+		width: 100%;
+		display: table;
+		overflow: hidden;
+	}
+
+	.wsWprd h3 {
+		margin-bottom: 0;
+		padding-left: 25px;
+		font-size: 18px;
+		line-height: 1.8;
+		letter-spacing: 1px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.wsWprd p {
+		padding: 0 21px;
+		margin-bottom: 20px;
+		font-size: 11px;
+		line-height: 1.8;
+		letter-spacing: -.4px;
+	}
+
+	.wsWprd p a:hover {
+		text-decoration: underline;
+	}
+
+	.wsImg01 {
+		margin-top: 0;
+		margin-right: -11px;
+		width: 144px;
+	}
+
+	.wsLink {
+		padding-top: 14px;
+		text-align: center;
+	}
+
+	.wsLink a {
+		padding: 14px 10px 14px 27px;
+		min-width: 225px;
+		font-size: 12px;
+		letter-spacing: 1px;
+		background-position: center left 17px;
+	}
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+	.engContent {
+		line-height: 1.5;
+	}
+
+	.copy a:hover {
+		opacity: 1;
+	}
+}
+
+/*---------new----------*/
+
+.newsTitle h2 {
+	width: 100%;
+	padding-left: 0;
+	font-size: 31px;
+	letter-spacing: 2px;
+	float: none;
+	text-align: center;
+}
+
+.newsBox {
+	width: 1030px;
+	margin: 96px auto 156px;
+	font-family:  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+.newsBox ul {
+	margin: 51px 0 20px 7px;
+	box-sizing: border-box;
+}
+
+.newsBox li {
+	width: 473px;
+	margin-right: 77px;
+	margin-bottom: 34px;
+	float: left;
+	overflow: hidden;
+}
+
+.newsBox li:nth-child(2n) {
+	margin-right: 0;
+}
+
+.newsBox li a {
+	opacity: 1;
+	display: block;
+}
+
+.newsBox li:hover a {
+	opacity: .5;
+	transition: opacity .6s ease;
+}
+
+.newsBox .newsPic {
+	width: 95px;
+	margin-top: 4px;
+	float: left;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #eee;
+}
+
+.newsBox .newsPic img {
+	width: 100%;
+	display: block;
+	opacity: 0 !important;
+}
+
+.newsBox .newsWord {
+	margin-left: 123px;
+}
+
+.newsBox .newsWord span {
+	margin-bottom: 9px;
+	display: block;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	color: #999999;
+}
+
+.newsBox .newsWord p {
+	font-size: 13px;
+	letter-spacing: .7px;
+	line-height: 1.9;
+}
+
+.linkTo {
+	text-align: center;
+}
+
+.linkTo a {
+	display: inline-block;
+	font-size: 15px;
+	color: #040404;
+	opacity: 1;
+	letter-spacing: 1.5px;
+	text-decoration: underline;
+}
+
+.linkTo a:hover {
+	opacity: .5;
+	text-decoration: none;
+	transition: opacity .6 ease;
+}
+
+.makingBox {
+	margin: 103px 0 0;
+	position: relative;
+}
+
+.making {
+	width: 770px;
+}
+
+.making .archiveJapanTitle {
+    padding-right: 43px;
+}
+
+.making .archiveUkTitle {
+    padding-left: 38px;
+    font-size: 23px;
+    letter-spacing: 0.2px;
+    line-height: 50px;
+}
+
+.making .contentsJapan,
+.making .contentsUK {
+	margin-top: 32px;
+}
+
+.making .contentsJapan {
+	padding-left: 3px;
+	padding-right: 32px;
+}
+
+.making .contentsUK {
+	padding-left: 36px;
+}
+
+.making .contentsJapan p {
+	font-size: 13px;
+	letter-spacing: .15px;
+	line-height: 2.45;
+}
+
+.making .contentsUK p {
+	font-size: 13px;
+    letter-spacing: .8px;
+    line-height: 1.93;
+    padding-top: 4px;
+}
+
+.makingLeft {
+	width: 200px;
+	padding-left: 22px;
+	position: absolute;
+	top: -110px;
+	left: -22px;
+	box-sizing: border-box;
+	box-shadow: 6px 12px 20px rgba(0,0,0,.35);
+	transition: transform 0.1s;
+}
+
+.makingRight {
+	width: 170px;
+	position: absolute;
+	right: 0;
+	bottom: 22px;
+	box-shadow: 8px 12px 18px rgba(0,0,0,.35);
+	transition: transform 0.1s;
+}
+
+.makingLeft img,
+.makingRight img {
+	width: 100%;
+	display: block;
+}
+
+.pageLink {
+	width: 1200px;
+	margin: 107px auto 0;
+}
+
+.linkTitle h2 {
+	width: 100%;
+	padding-right: 0;
+	float: none;
+	text-align: center;
+	letter-spacing: 5.6px;
+}
+
+.linkTitle .archiveJapanTitle:after {
+	display: none;
+}
+
+.pageLink  ul {
+	margin-top: 37px;
+	padding-left: 177px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+.pageLink li {
+	width: 241px;
+	margin-bottom: 16px;
+	padding-right: 20px;
+	float: left;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	font-size: 13px;
+	letter-spacing: 0px;
+	color: #040404;
+}
+
+.pageLink li:nth-child(4n) {
+	margin-right: 0;
+}
+
+.pageLink li a {
+	opacity: 1;
+}
+
+.pageLink li:hover a {
+	opacity: .5;
+	transition: opacity .6s ease;
+}
+
+.pageLink01 {
+	margin-top: 59px;
+}
+
+.header {
+	position: relative;
+}
+
+.header  h2 {
+	padding: 35px 0;
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 5px;
+	color: #35a740;
+}
+
+.btnBack {
+	display: block;
+	position: absolute;
+	left: 43px;
+	top: 32px;
+	font-size: 13px;
+	letter-spacing: 1.3px;
+}
+
+.btnBack img {
+	width: 10px;
+	margin-right: 8px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btnBack span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btnBack:hover {
+	opacity: .5;
+	transition: opacity .6s ease;
+}
+
+.newsBox01 {
+	width: 1040px;
+	margin-top: -9px;
+	margin-bottom: 0;
+}
+
+.newsBox01 .newsTitle h2 {
+	letter-spacing: .6px;
+}
+
+.newsBox01 ul {
+    margin: 67px 0 16px 22px;
+}
+
+.newsBox01 li {
+	width: 466px;
+	margin-right: 84px;
+}
+
+.footerLogo {
+	width: 194px;
+	margin: 0 auto 42px;
+}
+
+.footerLogo  img {
+	width: 100%;
+	display: block;
+}
+
+.pageTop01 {
+	margin: 16px auto 92px;
+}
+
+.copy01 {
+	margin-bottom: 5px;
+	color: #040404;
+	letter-spacing: .8px;
+}
+
+.copy01 i {
+	font-size: 16px;
+	font-style: normal;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.copy01 a {
+	color: #040404;
+}
+
+@media all and (min-width: 0) and (max-width: 767px) {
+	.newsBox {
+		width: auto;
+		margin: 44px auto 75px;
+	}
+
+	.newsTitle h2 {
+		font-size: 21px;
+	}
+
+	.newsBox ul {
+		margin: 27px 12px 4px 15px;
+	}
+
+	.newsBox li {
+		width: auto;
+		margin-right: 0;
+		margin-bottom: 17px;
+		float: none;
+		overflow: hidden;
+	}
+
+	.newsBox .newsPic {
+		width: 58px;
+		margin-top: 2px;
+	}
+
+	.newsBox .newsWord {
+	    margin-left: 76px;
+	    box-sizing: border-box;
+	}
+
+	.newsBox .newsWord span {
+		margin-bottom: 4px;
+		font-size: 10px;
+		letter-spacing: .6px;
+	}
+
+	.newsBox .newsWord p {
+		font-size: 11px;
+		letter-spacing: .4px;
+		line-height: 1.5;
+	}
+
+	.linkTo a {
+		font-size: 14px;
+	}
+
+	.newsBox li:hover a {
+		opacity: 1;
+	}
+
+	.linkTo a:hover {
+		opacity: 1;
+		text-decoration: underline;
+	}
+
+	.makingBox {
+	    margin: 37px 0 -10px;
+	    padding-bottom: 123px;
+	    overflow: hidden;
+	    box-sizing: border-box;
+	}
+
+	.making {
+		width: auto;
+	}
+
+	.making .archiveJapanTitle,
+	.making .contentsJapan {
+		width: 100%;
+		padding-right: 0;
+		display: block;
+	}
+
+	.making .archiveJapanTitle h2 {
+		letter-spacing: 1px;
+	}
+
+	.making .contentsJapan {
+		padding: 0 21px;
+		margin-top: 15px;
+	}
+
+	.making .contentsJapan p {
+		min-height: auto;
+		font-size: 11px;
+		line-height: 2.24;
+	}
+
+	.making .archiveUkTitle {
+		font-size: 20px;
+		line-height: normal;
+	}
+
+	.making .contentsUK p {
+		padding-top: 0;
+	}
+
+	.makingLeft {
+		width: calc(44.5% + 22px);
+		padding-left: 22px;
+		position: relative;
+		float: left;
+		left: -22px;
+		top: 54px;
+		box-shadow: 0 8px 8px rgba(0,0,0,.25);
+	}
+
+	.makingRight {
+		width: calc(43.4% + 10px);
+		padding-right: 10px;
+		position: relative;
+		float: right;
+		right: -10px;
+		top: 117px;
+		bottom: auto;
+		box-sizing: border-box;
+		box-shadow: 0px 7px 8px rgba(0,0,0,.35);
+	}
+
+	.pageLink {
+		width: 100%;
+		margin: 67px auto 0;
+	}
+
+	.pageLink ul {
+		padding-left: 0;
+		margin: 29px 30px 0;
+	}
+
+	.linkTitle .archiveJapanTitle {
+		display: block;
+		letter-spacing: 3.3px;
+	}
+
+	.pageLink li {
+		width: 50%;
+		margin-bottom: 6px;
+		margin-right: 0;
+		padding-right: 5px;
+	    font-size: 10px;
+
+	}
+
+	.pageLink li:nth-child(2n) {
+		padding-right: 0;
+	}
+
+	.pageLink li:hover a  {
+		opacity: 1;
+	}
+
+	.pageLink li a {
+		font-size: 10px;
+		letter-spacing: 1px;
+	}
+
+	.header h2 {
+		padding: 19px 0;
+		font-size: 14px;
+		letter-spacing: 3.1px;
+	}
+
+	.btnBack {
+		font-size: 9px;
+		left: 15px;
+		top: 23px;
+	}
+
+	.btnBack img {
+		width: 9px;
+		margin-right: 1px;
+	}
+
+	.newsBox01 .newsTitle h2 {
+		letter-spacing: 1.4px;
+	}
+
+	.newsBox01 {
+		margin: -16px auto 0;
+	}
+
+	.newsBox01 ul {
+	    margin: 29px 12px 4px 15px;
+	}
+
+	.pageTop01 {
+		width: 38px;
+	}
+
+	.footerLogo {
+	    width: 146px;
+	}
+
+	.copy01 {
+		margin-bottom: 16px;
+	    letter-spacing: .3px;
+	}
+
+	.copy01 i {
+		font-size: 8px;
+	}
+}
+
+@media all and (min-width: 0) and (max-width: 320px) {
+	.pageLink ul {
+		margin: 29px 15px 0;
+	}
+
+	.pageLink li:nth-child(odd) {
+		width: 57.1%;
+		padding-left: 6.7%;
+	}
+
+	.pageLink li:nth-child(even) {
+		width: 42.9%;
+	}
+}
