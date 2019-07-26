@@ -10,19 +10,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import tool.MyDebug;
+import tool.Page;
 
 /**
- * Servlet implementation class Add
+ * Servlet implementation class Get
  */
-@WebServlet("/Add")
-public class Add extends HttpServlet {
+@WebServlet("/Get")
+public class Get extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Add() {
+    public Get() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,10 +31,21 @@ public class Add extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name = "name";
-		String value = "value";
-		Cookie cookie = new Cookie(name,value);
-		response.addCookie(cookie);
+		PrintWriter out = response.getWriter();
+		Page.header(out);
+
+		Cookie[] cookies = request.getCookies();
+		if(cookies != null) {
+			for(Cookie cookie : cookies) {
+				String name = cookie.getName();
+				String value = cookie.getValue();
+				out.println("<p>" + name + ":" + value + "</p>");
+			}
+		} else {
+			out.println("クッキーは存在しません");
+		}
+
+		Page.footer(out);
 	}
 
 	/**
@@ -46,3 +57,4 @@ public class Add extends HttpServlet {
 	}
 
 }
+
