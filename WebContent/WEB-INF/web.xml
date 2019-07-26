@@ -8,6 +8,7 @@
     <servlet-name>Serv</servlet-name>
     <url-pattern>/Serv</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>Greeting</servlet-name>
     <servlet-class>sample.Greeting</servlet-class>
@@ -16,6 +17,7 @@
     <servlet-name>Greeting</servlet-name>
     <url-pattern>/Greeting</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>Kusokora</servlet-name>
     <servlet-class>sample.Kusokora</servlet-class>
@@ -24,6 +26,20 @@
     <servlet-name>Kusokora</servlet-name>
     <url-pattern>/Kusokora</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ParamServlet</servlet-name>
+    <servlet-class>advance.ParamServlet</servlet-class>
+    <init-param>
+      <param-name>message</param-name>
+      <param-value>servlet-init-param</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ParamServlet</servlet-name>
+    <url-pattern>/ParamServlet</url-pattern>
+  </servlet-mapping>
+
   <filter>
     <filter-name>EncFilter</filter-name>
     <filter-class>tool.EncFilter</filter-class>
@@ -32,6 +48,7 @@
     <filter-name>EncFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+
   <filter>
     <filter-name>hellofilter</filter-name>
     <filter-class>tool.HelloFilter</filter-class>
@@ -40,6 +57,7 @@
     <filter-name>hellofilter</filter-name>
     <url-pattern>/Serv</url-pattern>
   </filter-mapping>
+
   <filter>
     <filter-name>hellofilter2</filter-name>
     <filter-class>tool.HelloFilter2</filter-class>
@@ -48,6 +66,21 @@
     <filter-name>hellofilter2</filter-name>
     <url-pattern>/Serv</url-pattern>
   </filter-mapping>
+
+  <filter>
+  	<filter-name>FilterParam</filter-name>
+  	<filter-class>tool.FilterParam</filter-class>
+
+	<init-param>
+		<param-name>message</param-name>
+		<param-value>filter-init-param</param-value>
+	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>FilterParam</filter-name>
+  	<url-pattern>/ParamServlet</url-pattern>
+  </filter-mapping>
+
   <session-config>
     <session-timeout>3</session-timeout>
   </session-config>
